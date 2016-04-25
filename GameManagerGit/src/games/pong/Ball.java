@@ -7,7 +7,8 @@ import java.util.Random;
 public class Ball{
 	
 	protected int x, y, width = 20, height = 20, YMotion, XMotion;
-	protected Random random = new Random();;
+	protected Random random = new Random();
+	
 	protected final Pong pong;
 	protected final Paddle player, bot;
 	
