@@ -8,13 +8,13 @@ import java.awt.event.WindowEvent;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import games.GameManager;
+import utils.Utils;
 
 public final class TicTacToe {
 	public static final void startGame() {
@@ -65,7 +65,7 @@ public final class TicTacToe {
 		frame.getContentPane().add(safeClose);
 		JLabel layout = new JLabel();
 		layout.setBounds(0, 0, 565, 350);
-		layout.setIcon(new ImageIcon(getClass().getResource("/tttLayout.png")));
+		layout.setIcon(Utils.getBlack(565, 350));
 		frame.getContentPane().add(layout);
 		frame.setVisible(true);
 	}

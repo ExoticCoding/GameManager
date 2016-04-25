@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 
 import games.pong.Pong;
 import games.tictactoe.TicTacToe;
+import utils.Utils;
 
 public class GameManager{
 
@@ -20,7 +21,6 @@ public class GameManager{
 	
 	private final ImageIcon closeImg = new ImageIcon(getClass().getResource("/close.png")),
 	minimizeImg = new ImageIcon(getClass().getResource("/minimize.png")),
-	layoutImg = new ImageIcon(getClass().getResource("/black.png")),
 	pongImg = new ImageIcon(getClass().getResource("/Pong.png")),
 	tttImg = new ImageIcon(getClass().getResource("/ttt.png"));
 	
@@ -48,7 +48,7 @@ public class GameManager{
 		
 		pongLabel.setIcon(pongImg); tttLabel.setIcon(tttImg);
 		closeLabel.setIcon(closeImg); minimize.setIcon(minimizeImg);
-		layout.setIcon(layoutImg);
+		layout.setIcon(Utils.getBlack(600, 400));
 		
 		frame.getContentPane().add(pongLabel); frame.getContentPane().add(tttLabel); 
 		frame.getContentPane().add(closeLabel); frame.getContentPane().add(minimize);

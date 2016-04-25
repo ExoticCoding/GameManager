@@ -13,10 +13,10 @@ public class SettingsFrame extends BaseFrame{
 	
 	private static final long serialVersionUID = 1L;
 	protected final Pong pong;
-	protected final Image scoreImg = new ImageIcon(getClass().getResource("/maxscore.png")).getImage(),
-			plus = new ImageIcon(getClass().getResource("/+.png")).getImage(),
-			subt = new ImageIcon(getClass().getResource("/-.png")).getImage(),
-			ballImg = new ImageIcon(getClass().getResource("/gamespeed.png")).getImage();
+	protected final Image scoreImg = new ImageIcon(getClass().getResource("/Pong/maxscore.png")).getImage(),
+			plus = new ImageIcon(getClass().getResource("/Pong/+.png")).getImage(),
+			subt = new ImageIcon(getClass().getResource("/Pong/-.png")).getImage(),
+			ballImg = new ImageIcon(getClass().getResource("/Pong/gamespeed.png")).getImage();
 	
 	public SettingsFrame(Pong pong) {
 		this.pong = pong;
