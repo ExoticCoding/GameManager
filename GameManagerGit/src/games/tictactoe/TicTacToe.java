@@ -22,14 +22,14 @@ public final class TicTacToe {
 		new TicTacToe();
 	}
 	
-	private boolean 				player1 = true;
+	private boolean player1 = true;
 	
-	private final Font				font = new Font("Serif", Font.BOLD | Font.ITALIC, 30);
-	private final String[][] 		board = new String[3][3];
-	private final JFrame 			frame = new JFrame();
-	private final JLabel 			playerLabel = new JLabel("Player 1");
-	private final JButton 			slot1, slot2, slot3, slot4, slot5, slot6, slot7, slot8, slot9, safeClose = new JButton("Close");
-	private final List<JButton> 	slots;
+	private final Font font = new Font("Serif", Font.BOLD | Font.ITALIC, 30);
+	private final String[][] board = new String[3][3];
+	private final JFrame frame = new JFrame();
+	private final JLabel playerLabel = new JLabel("Player 1");
+	private final JButton slot1, slot2, slot3, slot4, slot5, slot6, slot7, slot8, slot9, safeClose = new JButton("Close");
+	private final List<JButton> slots;
 	
 	private TicTacToe() {
 		frame.setSize(565, 350);
