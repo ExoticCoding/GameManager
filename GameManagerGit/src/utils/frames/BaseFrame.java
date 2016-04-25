@@ -10,12 +10,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import games.ActionReader;
+import utils.Utils;
 
 public class BaseFrame extends JFrame{
 	
 	private static final long serialVersionUID = 1L;
-	private final Image closeImg = new ImageIcon(getClass().getResource("/close.png")).getImage(),
-			layoutImg = new ImageIcon(getClass().getResource("/black.png")).getImage();
+	private final Image closeImg = new ImageIcon(getClass().getResource("/close.png")).getImage();
 	
 	public BaseFrame() {
 		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
@@ -50,7 +50,7 @@ public class BaseFrame extends JFrame{
 	public void createLayout(){
 		JLabel layout = new JLabel();
 		layout.setBounds(0, 0, 600, 400);
-		layout.setIcon(new ImageIcon(layoutImg));
+		layout.setIcon(Utils.getBlack(600, 400));
 		getContentPane().add(layout);
 	}
 	

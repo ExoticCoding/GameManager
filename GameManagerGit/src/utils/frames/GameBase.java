@@ -12,6 +12,7 @@ import games.ActionReader;
 import games.GameManager;
 
 public class GameBase extends ActionReader{
+	
 	public SubFrame createFrame(int width, int height){
 		SubFrame frame = new SubFrame(width, height);
 		frame.addKeyListener(this);
