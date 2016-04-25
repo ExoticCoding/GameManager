@@ -70,6 +70,7 @@ public class Pong extends GameBase{
 			updateBot();
 		}
 	}
+	
 	public void updateBot(){
 		if(botCooldown > 0) botCooldown--;
 		else{
@@ -101,16 +102,19 @@ public class Pong extends GameBase{
 			updateBoard();
 		}
 	}
+	
 	@Override
 	public void checkESC(KeyEvent ev, JFrame frame, Timer timer){
 		int id = ev.getKeyCode();
 		if(id == KeyEvent.VK_ESCAPE) endGame(null);
 	}
+	
 	public void beginGame(){
 		rally = 0;
 		ingame = true;
 		countdown = 120;
 	}
+	
 	@Override
 	public void keyPressed(KeyEvent ev) {
 		int id = ev.getKeyCode();
@@ -135,10 +139,12 @@ public class Pong extends GameBase{
 			}
 		}
 	}
+	
 	@Override
 	public void keyReleased(KeyEvent ev) {
 		int id = ev.getKeyCode();
 		if(id == KeyEvent.VK_UP || id == KeyEvent.VK_W) up = false;
 		if(id == KeyEvent.VK_DOWN || id == KeyEvent.VK_S) down = false;
-	}	
+	}
+	
 }

@@ -34,6 +34,7 @@ public class GameManager{
 		createButtons();
 		frame.setVisible(true);
 	}
+	
 	private final void createButtons() {
 		JLabel pongLabel=new JLabel(), tttLabel=new JLabel(), closeLabel=new JLabel(), minimize=new JLabel(), layout=new JLabel();
 		
@@ -54,6 +55,7 @@ public class GameManager{
 		frame.getContentPane().add(closeLabel); frame.getContentPane().add(minimize);
 		frame.getContentPane().add(layout);
 	}
+	
 	private final ActionReader openPong(){
 		return new ActionReader() { 
 			@Override
@@ -62,6 +64,7 @@ public class GameManager{
 			}
 		};
 	}
+	
 	private final ActionReader openTTT(){
 		return new ActionReader(){
 			@Override
@@ -70,6 +73,7 @@ public class GameManager{
 			}
 		};
 	}
+	
 	private final ActionReader close(boolean click){
 		if(!click){
 			return new ActionReader(){
@@ -86,6 +90,7 @@ public class GameManager{
 			}
 		};
 	}
+	
 	private final ActionReader minimize(){
 		return new ActionReader(){
 			@Override
@@ -94,4 +99,5 @@ public class GameManager{
 			}
 		};
 	}
+	
 }

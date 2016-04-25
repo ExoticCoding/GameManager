@@ -54,6 +54,7 @@ public class SettingsFrame extends BaseFrame{
 		else pong.gameSpeed = val;
 		lab.setIcon(getImage(get(score)));
 	}
+	
 	public int get(boolean score){
 		if(score) return pong.maxScore;
 		else return pong.gameSpeed;

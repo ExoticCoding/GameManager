@@ -69,6 +69,7 @@ public final class TicTacToe {
 		frame.getContentPane().add(layout);
 		frame.setVisible(true);
 	}
+	
 	private final void setupButton(JButton button, int row, int col){
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
@@ -88,6 +89,7 @@ public final class TicTacToe {
 		button.setFont(new Font("Arial", Font.BOLD, 30));
 		frame.getContentPane().add(button);
 	}
+	
 	private final void  resetGame(String winner){
 		String string = winner == null ? "The game was a draw!" : winner + " has won the game!";
 		JOptionPane.showMessageDialog(frame, string, "Game Ended", JOptionPane.DEFAULT_OPTION);
@@ -96,10 +98,12 @@ public final class TicTacToe {
 		playerLabel.setText("Player 1");
 		slots.forEach(e -> e.setText(""));
 	}
+	
 	private final boolean checkFull(){
 		for(int a = 0; a < 3; a++) for(int b = 0; b < 3; b++) if(board[a][b] == null) return false;
 		return true;
 	}
+	
 	private final boolean checkSpaces(String value){
 		for(int a = 0; a < 3; a++){
 			for(int b = 0; b < 3 && board[b][a] == value; b++) if(b == 2) return true;
@@ -108,4 +112,5 @@ public final class TicTacToe {
 		for(int a = 0; a < 3 && board[a][a] == value; a++) if(a == 2) return true;
 		return (board[0][2] == value && board[1][1] == value && board[2][0] == value);
 	}
+	
 }
