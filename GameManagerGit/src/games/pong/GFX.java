@@ -38,7 +38,7 @@ public class GFX extends JPanel{
 		g.drawString("-> Edit settings", 20, 250);
 		g.setColor(Color.GRAY);
 		g.setFont(new Font("Verdana", Font.ITALIC, 20));
-		for(int i = 0; i < pong.actions.size(); i++) g.drawString(pong.actions.get(i), 393, (i * 40) + 450);
+		for(int i = 0; i < pong.actions.length; i++) g.drawString(pong.actions[i], 393, (i * 40) + 450);
 		if(pong.winner != null){
 			String[] strings = {
 					"You have beaten the bot!", "You have been beaten by the bot...", "Congratulations!", "Better luck next time"
